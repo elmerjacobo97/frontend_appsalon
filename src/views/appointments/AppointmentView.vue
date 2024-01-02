@@ -54,7 +54,10 @@ const disabledDate = (date) => {
           no-input
         />
       </div>
-      <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-5 mt-5 lg:mt-0">
+      <div
+        v-if="appointments.isDateSelected"
+        class="flex-1 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-5 mt-5 lg:mt-0"
+      >
         <button
           type="button"
           @click="appointments.time = hour"
